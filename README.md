@@ -1,1 +1,1 @@
-# sam-xl.github.io
+# Public SAM XL Documentation
