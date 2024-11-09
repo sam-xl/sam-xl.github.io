@@ -4,7 +4,7 @@ nav:
   - Home: index.md
 
 theme:
-  name: readthedocs
+  name: material
   palette:
 
   # Palette toggle for automatic mode
