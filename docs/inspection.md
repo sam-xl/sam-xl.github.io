@@ -96,10 +96,11 @@ True Positive (TP), False Positive (FP), False Negative (FN) can be obtained fro
 | **True**      | The system correctly identifies an actual defect as a defect | The system correctly identifies a position with no defect as defect-free |
 | **False**     | The system incorrectly identifies a non-defective area as a defect | The system incorrectly identifies a defect as a non-defect area (missed detection) |
 
-
-
 ![multi defect distribution](./assets/multi_defects_distribution.png)
 
+An illustration of our detection distribution can be seen in the above figure. Each colored closed-contour area represents defection region with a margin error of 5 mm. Each scatter point is a defect predicition from each of our experiment. If a scatter point falls within the closed-contour area, it is considered as a True Positive (TP), otherwise it is a False Positive (FP).
+
+The following figures show the Precision, Recall, and F1-Score of our inspection system with different exposure time and idle time settings:
 ![exp 50 idle 1400](./assets/exp_50_idle_1400.png) 
 
 ![exp 100 idle 1400](./assets/exp_100_idle_1400.png)
@@ -111,6 +112,18 @@ True Positive (TP), False Positive (FP), False Negative (FN) can be obtained fro
 ![exp 3000 idle 1400](./assets/exp_3000_idle_1400.png)
 
 ### Intersection over Union (IoU)
-![iou](./assets/IOU_eval.png)
 
-![polygon](./assets/polygon_localization.png)
+Intersection over Union (IoU) is a metric used to evaluate the accuracy of an object detector on a particular dataset. It measures the overlap between the predicted bounding box and the ground truth bounding box. The IoU is calculated as the area of the intersection divided by the area of the union of the predicted and ground truth bounding boxes.
+
+Mathematically, IoU is defined as:
+
+\[ \text{IoU} = \frac{\text{Area of Intersection}}{\text{Area of Union}} \]
+
+An IoU score ranges from 0 to 1, where 1 indicates perfect overlap between the predicted and ground truth bounding boxes, and 0 indicates no overlap at all. Higher IoU scores indicate better performance of the object detection model. In our inspection system, IoU is used to evaluate the localization accuracy of detected defects. By comparing the predicted defect regions with the ground truth defect regions, we can determine how well our system is able to identify and localize defects on the inspected surfaces.
+
+The following figure illustrates the predicted defect regions as polygons in one of our experiment:
+![Polygon Localization](./assets/polygon_localization.png)
+
+By calculating the IoU score for each predicted defect region with respect to the ground truth defect region, we can evaluate the accuracy of our defect detection and localization system. The IoU score provides a quantitative measure of how well the predicted defect regions align with the ground truth defect regions. Higher IoU scores indicate better alignment between the predicted and ground truth defect regions, while lower IoU scores indicate misalignment or poor localization accuracy. The following figures show the IoU scores for different exposure time and idle time settings:
+
+![iou](./assets/IOU_eval.png)
