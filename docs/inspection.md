@@ -75,6 +75,23 @@ All these defects have different parameters that may be considered before catego
 ## Results
 
 ### Precision/Recall/F1-Score
+To evalue the performance of our inspection on Metal Surface, we use Precision, Recall and F1-Score metrics:
+
+- **Precision**: Measures the proportion of correct defect detections over all detected defects. **Precision = TP / (TP + FP)**
+
+- **Recall**: Measure the proportion of correct defect detection over all existed ground-truth defects. **Recall = TP / (TP + FN)**
+
+- **F1 Score**: By improving the Precision, we usually lowering the Recall of the system.  F1 scores is a measure of the harmonic mean of Precision and Recall. **F1 Score = (2 * Precision * Recall) / (Precision + Recall)**
+
+True Positive (TP), False Positive (FP), False Negative (FN) can be obtained from the Confusion Matrix table:
+
+|               | **Positive**                                    | **Negative**                                    |
+|---------------|------------------------------------------------|------------------------------------------------|
+| **True**      | The system correctly identifies an actual defect as a defect | The system correctly identifies a position with no defect as defect-free |
+| **False**     | The system incorrectly identifies a non-defective area as a defect | The system incorrectly identifies a defect as a non-defect area (missed detection) |
+
+
+
 ![multi defect distribution](./assets/multi_defects_distribution.png)
 
 ![exp 50 idle 1400](./assets/exp_50_idle_1400.png) 
