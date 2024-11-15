@@ -10,25 +10,10 @@
 
 ## Introduction
 
-## Definition of Defect
-This deliverable aims at detecting defects on two types of samples, metallic surfaces with potential imperfections and surfaces with two slits of fibre tape on them which will be referred to as edge detection. Each of these applications considers different things as defects:
-
-1. __Metallic surface__: It is of utmost importance that the metallic slates do not have any manufacturing defects. The ones being searched for in this experiment are scratches __and defects:
-
-1. __Edge detection__: The fibre tape has to be positioned in the right place with very little margin for error. The defects that may be found in this scenario are either overlaps or gaps between the two slits of fibre tape.
-
-All these defects have different parameters that may be considered before categorising them as defects depending on the application:
-
-1. __Scratch defects__: The driving dimension for this type of defect is the depth of the scratch. For the experiments that have been performed, a depth of 30 microns or deeper has been selected as the threshold to consider it as a defect. The reason behind this is that the rugosity of the surface creates small peaks and lows that are smaller than 30 microns.
-
-1. __Waviness__: This kind of defect appears as peaks and valleys on the surface of the metal sheet. The driving dimensions are the amplitude and wavelength of said waves. The selected target is 20 microns for the amplitude and 40 for the wave length.
-
-1. __Gap__: For the purpose of this experiment the trigger for the gap detection is the lowest possible. This means that theoretically it shall detect gaps that start at 12 microns width.
-
-1. __Overlap__: An overlap will be considered to be so when the height of the fibre tape is twice the height of the fibre tape itself.
-
 ## Experiment Setup
-The aim of this deliverable is to evaluate the performance and effectiveness of an automated inspect system with Laser Line Scanner (LLS). To conduct this investigation, we designed  a system that integrates Robot Manipulator Doosan M1013 with a mounted Laser Line Scanner (LLS) Micro-Epsilon LLT3010-25 as the robot's end-effector
+The aim of this deliverable is to evaluate the performance and effectiveness of an automated inspect system with Laser Line Scanner (LLS). To conduct this investigation, we designed  a system that integrates Robot Manipulator Doosan M1013 with a mounted Laser Line Scanner (LLS) Micro-Epsilon LLT3010-25 as the robot's end-effector.
+
+![Experimental Setup](./assets/experimental_setup.png)
 
 ### Doosan Robot M1013
 Doosan Robot M1013 is a versatile, collaborate robot (cobot) that is designed to work alongside humans. This 6-axis robot has a payload of 10 kg, a reach of 1.3m, and repeatbility of 0.05mm. The key features of the Doosan Robot M1013 are:
@@ -70,6 +55,22 @@ The overview architecture of this system is illustrated in the following figure:
 
 Although both ROS and Doosan WorkCell Manager can be used as the interface to control Doosan Robot, we selected  ROS the primary interface for several reasons. First, it offers greater flexibility for programming and configuring our experiments, such as adjusting waypoints an robot velocity during runtime. Secondly, ROS provides the client an unified interface to define both robot and LLS parameters. Thirdly, ROS allows us to synchronized the communication between our system components, which is considerably beneficial when we need to collect our data in a synchronized manner (i.e., localize defect during inspecting).
 
+## Definition of Defect
+This deliverable aims at detecting defects on two types of samples, metallic surfaces with potential imperfections and surfaces with two slits of fibre tape on them which will be referred to as edge detection. Each of these applications considers different things as defects:
+
+1. __Metallic surface__: It is of utmost importance that the metallic slates do not have any manufacturing defects. The ones being searched for in this experiment are scratches __and defects:
+
+1. __Edge detection__: The fibre tape has to be positioned in the right place with very little margin for error. The defects that may be found in this scenario are either overlaps or gaps between the two slits of fibre tape.
+
+All these defects have different parameters that may be considered before categorising them as defects depending on the application:
+
+1. __Scratch defects__: The driving dimension for this type of defect is the depth of the scratch. For the experiments that have been performed, a depth of 30 microns or deeper has been selected as the threshold to consider it as a defect. The reason behind this is that the rugosity of the surface creates small peaks and lows that are smaller than 30 microns.
+
+1. __Waviness__: This kind of defect appears as peaks and valleys on the surface of the metal sheet. The driving dimensions are the amplitude and wavelength of said waves. The selected target is 20 microns for the amplitude and 40 for the wave length.
+
+1. __Gap__: For the purpose of this experiment the trigger for the gap detection is the lowest possible. This means that theoretically it shall detect gaps that start at 12 microns width.
+
+1. __Overlap__: An overlap will be considered to be so when the height of the fibre tape is twice the height of the fibre tape itself.
 
 ## Results
 
@@ -82,9 +83,9 @@ Although both ROS and Doosan WorkCell Manager can be used as the interface to co
 
 ![exp 1000 idle 1400](./assets/exp_1000_idle_1400.png)
 
-![](./assets/exp_2000_idle_1400.png)
+![exp 2000 idle 1400](./assets/exp_2000_idle_1400.png)
 
-![](./assets/exp_3000_idle_1400.png)
+![exp 3000 idle 1400](./assets/exp_3000_idle_1400.png)
 
 ### Intersection over Union (IoU)
 ![iou](./assets/IOU_eval.png)
