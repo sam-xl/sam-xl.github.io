@@ -2,6 +2,7 @@ site_name: SAM XL Documentations
 
 nav:
   - Home: index.md
+  - Automated Inspection with LLS: inspection.md
 
 theme:
   name: material
