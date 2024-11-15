@@ -1,0 +1,760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Automated Inspection with LLS - SAM XL Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automated-inspection-with-laser-line-scanner" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAM XL Documentations" class="md-header__button md-logo" aria-label="SAM XL Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAM XL Documentations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automated Inspection with LLS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAM XL Documentations" class="md-nav__button md-logo" aria-label="SAM XL Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SAM XL Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Automated Inspection with LLS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Automated Inspection with LLS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doosan-robot-m1013" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doosan Robot M1013
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micro-epsilon-llt3010-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro-Epsilon LLT3010-25
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Samples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-defect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of Defect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precisionrecallf1-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precision/Recall/F1-Score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-over-union-iou" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection over Union (IoU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doosan-robot-m1013" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doosan Robot M1013
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micro-epsilon-llt3010-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro-Epsilon LLT3010-25
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Samples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-defect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of Defect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precisionrecallf1-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precision/Recall/F1-Score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection-over-union-iou" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersection over Union (IoU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="automated-inspection-with-laser-line-scanner">Automated Inspection with Laser Line Scanner</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#definition-of-defect">Definition of Defect</a></li>
+<li><a href="#methodology">Methodology</a></li>
+<li><a href="#experiment-setup">Experiments Setup</a></li>
+<li><a href="#results">Results</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>Inspection is a vital part in the lifecycle of any manufactured part. Starting from validation during manufacturing, and subsequently whenever repair is required. In this study we focus on a few representative cases such as: AFP (Automated Fiber Placement), scratch detection on metal, resin deposits on manufacturing blocks and deformations on metal sheets. </p>
+<p>Inspection is traditionally carried out in two steps. First, a visual inspection is performed to determine if there are any visible defects. Next, if anything is spotted in the first step, a detailed examination is performed. This could be a sub-surface scan or a surface inspection. This report focuses on using laser line scanners to perform the second step in an inspection process. Furthermore, this study also aims to detect defects during the process of AFP. </p>
+<p>The results from the study will help extrapolate the right set of tuning parameters needed to maximize defect detection. To do so a methodology is created, which can be followed for more cases than covered in this study.</p>
+<h2 id="experiment-setup">Experiment Setup</h2>
+<p>The aim of this deliverable is to evaluate the performance and effectiveness of an automated inspect system with Laser Line Scanner (LLS). To conduct this investigation, we designed  a system that integrates Robot Manipulator Doosan M1013 with a mounted Laser Line Scanner (LLS) Micro-Epsilon LLT3010-25 as the robot's end-effector.</p>
+<p><img alt="Experimental Setup" src="../assets/experimental_setup.png" /></p>
+<h3 id="doosan-robot-m1013">Doosan Robot M1013</h3>
+<p>Doosan Robot M1013 is a versatile, collaborate robot (cobot) that is designed to work alongside humans. This 6-axis robot has a payload of 10 kg, a reach of 1.3m, and repeatbility of 0.05mm. The key features of the Doosan Robot M1013 are:</p>
+<ul>
+<li><strong>Safety</strong>: The robot is equipped with 6 high-end torque sensors that allow it to react immediately to subtle force changes (i.e, collisions). This ensures the safety of human operators working alongside the robot.</li>
+<li><strong>Force control</strong>: The robot is capable of performing force-controlled tasks such as polishing and grinding. This is achived by the robot's ability to sense and react to subte force changes.</li>
+<li><strong>WorkCell Manager and ROS compatibility</strong>: Users can work seamlessly even with complex applications on the Teach Pedant with intuative UI from Workcell Manager. On the other hand, the robot is also compatible with ROS for advanced programming, customization, and integration with other systems. </li>
+</ul>
+<h3 id="micro-epsilon-llt3010-25">Micro-Epsilon LLT3010-25</h3>
+<p>The Micro-Epsilon LLT3010-25 is a high-precision profile LLS that uses a laser triangulation principle to meaure the profile of a surface. With a resolution of 2048 points per profile, a profile frequency of up to 10,000 Hz, and a linear precision of 1.5 µm, it is is widely used in industrial inspections task such as detecting surface defects, measuring precise dimensions, performing quality control, etc. Two critical parameters of the a LLS that influence the inspection performance are:</p>
+<ul>
+<li><strong>Exposure time</strong>: The scanner performs a measure by emitting laser light and capturing the reflected light. The exposure time is the time duration for which the sensor capture the reflected light. A longer exposure time allows more light to reach the sensor, which is useful in low-light or low-reflecitity conditions. However, high exposure time might produce motion blur and noise if the the scanning object is moving or highly reflective.</li>
+<li><strong>Idle time</strong>: After creating a measurment profile, the scanner needs to process the data before it can start a new measurement. The idle time is the time duration between two consecutive measurement. Longer idle time reduces the likelihood of data overlap and processing delay, yet, it reduces profile frequency and increaes the risk of missing profiles. </li>
+</ul>
+<h3 id="test-samples">Test Samples</h3>
+<p>We want to select our test samples to be as representative as posisble of the real-world application and running project at SAM XL. The three applications which are considered are Metal Surface Inspection, Automated Fiber Placement (AFP), and Thermoplast Residue Inspection.</p>
+<ul>
+<li><strong>Metal Surface Inspection</strong>: We simulated a metal surface inspection scenario by using a metallic sheet with a series of scratches and waviness. These scratches have different width and depth which range from easy to detect to hard to detect. </li>
+</ul>
+<p><img alt="Metal Surface Inspection" src="../assets/meta_scratch.png" /></p>
+<ul>
+<li><strong>Automated Fiber Placement (AFP)</strong>: We simulated three types of common defects in AFP process: gap, overlap, and fold. These defects are critical as they can lead to the failure of the composite part.</li>
+</ul>
+<p><img alt="Automated Fiber Placement" src="../assets/afp_inspect.png" /></p>
+<ul>
+<li><strong>Thermoplast Residue Inspection</strong>: We simulated a scenario where a thermoplast residue is left on the surface of a tool blocks. These residue needs to be detected and cleaned before the next production cycle to start.</li>
+</ul>
+<p><img alt="Thermoplast Residue Inspection" src="../assets/thermo_residue.png" /></p>
+<h2 id="methodology">Methodology</h2>
+<p>To perform an inspection process, the inspection system executes a series of coordinated tasks. First, the settings for the Laser Line Scanner (LLS), including exposure time and idle time, are configured through a ROS client. Subsequently, the Doosan Robot is guided along waypoints at predefined velocities using a ROS driver. These waypoints also define the orientation of the robot, ensuring that the laser profiles remain within the optimal operating range and at the correct angle relative to the inspection surfaces.  As the robot moves along its path, profile data is transmitted over UDP and processed to identify defects in real-time. Finally, relevant data of the inspection process is recorded in a database for further analysis.   </p>
+<p>Our data point contains robot velocities, LLS parameters (i.e, exposure time, idle time), defect locations, and defect characteristic (i.e, depth, starting point, end point) . A key challenge when collecting these data points is ensuring time synchronization. During the inspection, the robot state publisher and LLS ROS driver continuously stream their messages at different rates, thus each data entry must be synchronized to ensure that defect position can be mapped relative to robot’s base frame.  To achieve this, we use <a href="http://wiki.ros.org/message_filters">message filter</a> to buffer incoming messages from both streams and match them based on temporal proximity. </p>
+<p>The overview architecture of this system is illustrated in the following figure:</p>
+<p><img alt="System Architecture" src="../assets/system_design.png" /></p>
+<p>Although both ROS and Doosan WorkCell Manager can be used as the interface to control Doosan Robot, we selected  ROS the primary interface for several reasons. First, it offers greater flexibility for programming and configuring our experiments, such as adjusting waypoints an robot velocity during runtime. Secondly, ROS provides the client an unified interface to define both robot and LLS parameters. Thirdly, ROS allows us to synchronized the communication between our system components, which is considerably beneficial when we need to collect our data in a synchronized manner (i.e., localize defect during inspecting).</p>
+<h2 id="definition-of-defect">Definition of Defect</h2>
+<p>This deliverable aims at detecting defects on two types of samples, metallic surfaces with potential imperfections and surfaces with two slits of fibre tape on them which will be referred to as edge detection. Each of these applications considers different things as defects:</p>
+<ol>
+<li>
+<p><strong>Metallic surface</strong>: It is of utmost importance that the metallic slates do not have any manufacturing defects. The ones being searched for in this experiment are scratches __and defects:</p>
+</li>
+<li>
+<p><strong>Edge detection</strong>: The fibre tape has to be positioned in the right place with very little margin for error. The defects that may be found in this scenario are either overlaps or gaps between the two slits of fibre tape.</p>
+</li>
+</ol>
+<p>All these defects have different parameters that may be considered before categorising them as defects depending on the application:</p>
+<ol>
+<li>
+<p><strong>Scratch defects</strong>: The driving dimension for this type of defect is the depth of the scratch. For the experiments that have been performed, a depth of 30 microns or deeper has been selected as the threshold to consider it as a defect. The reason behind this is that the rugosity of the surface creates small peaks and lows that are smaller than 30 microns.</p>
+</li>
+<li>
+<p><strong>Waviness</strong>: This kind of defect appears as peaks and valleys on the surface of the metal sheet. The driving dimensions are the amplitude and wavelength of said waves. The selected target is 20 microns for the amplitude and 40 for the wave length.</p>
+</li>
+<li>
+<p><strong>Gap</strong>: For the purpose of this experiment the trigger for the gap detection is the lowest possible. This means that theoretically it shall detect gaps that start at 12 microns width.</p>
+</li>
+<li>
+<p><strong>Overlap</strong>: An overlap will be considered to be so when the height of the fibre tape is twice the height of the fibre tape itself.</p>
+</li>
+</ol>
+<h2 id="results">Results</h2>
+<h3 id="precisionrecallf1-score">Precision/Recall/F1-Score</h3>
+<p>To evalue the performance of our inspection on Metal Surface, we use Precision, Recall and F1-Score metrics:</p>
+<ul>
+<li>
+<p><strong>Precision</strong>: Measures the proportion of correct defect detections over all detected defects. <strong>Precision = TP / (TP + FP)</strong></p>
+</li>
+<li>
+<p><strong>Recall</strong>: Measure the proportion of correct defect detection over all existed ground-truth defects. <strong>Recall = TP / (TP + FN)</strong></p>
+</li>
+<li>
+<p><strong>F1 Score</strong>: By improving the Precision, we usually lowering the Recall of the system.  F1 scores is a measure of the harmonic mean of Precision and Recall. <strong>F1 Score = (2 * Precision * Recall) / (Precision + Recall)</strong></p>
+</li>
+</ul>
+<p>True Positive (TP), False Positive (FP), False Negative (FN) can be obtained from the Confusion Matrix table:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Positive</strong></th>
+<th><strong>Negative</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>True</strong></td>
+<td>The system correctly identifies an actual defect as a defect</td>
+<td>The system correctly identifies a position with no defect as defect-free</td>
+</tr>
+<tr>
+<td><strong>False</strong></td>
+<td>The system incorrectly identifies a non-defective area as a defect</td>
+<td>The system incorrectly identifies a defect as a non-defect area (missed detection)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="multi defect distribution" src="../assets/multi_defects_distribution.png" /></p>
+<p>An illustration of our detection distribution can be seen in the above figure. Each colored closed-contour area represents defection region with a margin error of 5 mm. Each scatter point is a defect predicition from each of our experiment. If a scatter point falls within the closed-contour area, it is considered as a True Positive (TP), otherwise it is a False Positive (FP).</p>
+<p>The following figures show the Precision, Recall, and F1-Score of our inspection system with different exposure time and idle time settings:
+<img alt="exp 50 idle 1400" src="../assets/exp_50_idle_1400.png" /> </p>
+<p><img alt="exp 100 idle 1400" src="../assets/exp_100_idle_1400.png" /></p>
+<p><img alt="exp 1000 idle 1400" src="../assets/exp_1000_idle_1400.png" /></p>
+<p><img alt="exp 2000 idle 1400" src="../assets/exp_2000_idle_1400.png" /></p>
+<p><img alt="exp 3000 idle 1400" src="../assets/exp_3000_idle_1400.png" /></p>
+<h3 id="intersection-over-union-iou">Intersection over Union (IoU)</h3>
+<p>Intersection over Union (IoU) is a metric used to evaluate the accuracy of an object detector on a particular dataset. It measures the overlap between the predicted bounding box and the ground truth bounding box. The IoU is calculated as the area of the intersection divided by the area of the union of the predicted and ground truth bounding boxes.</p>
+<p>Mathematically, IoU is defined as:</p>
+<div class="arithmatex">\[ \text{IoU} = \frac{\text{Area of Intersection}}{\text{Area of Union}} \]</div>
+<p>An IoU score ranges from 0 to 1, where 1 indicates perfect overlap between the predicted and ground truth bounding boxes, and 0 indicates no overlap at all. Higher IoU scores indicate better performance of the object detection model. In our inspection system, IoU is used to evaluate the localization accuracy of detected defects. By comparing the predicted defect regions with the ground truth defect regions, we can determine how well our system is able to identify and localize defects on the inspected surfaces.</p>
+<p>The following figure illustrates the predicted defect regions as polygons in one of our experiment:
+<img alt="Polygon Localization" src="../assets/polygon_localization.png" /></p>
+<p>By calculating the IoU score for each predicted defect region with respect to the ground truth defect region, we can evaluate the accuracy of our defect detection and localization system. The IoU score provides a quantitative measure of how well the predicted defect regions align with the ground truth defect regions. Higher IoU scores indicate better alignment between the predicted and ground truth defect regions, while lower IoU scores indicate misalignment or poor localization accuracy. The following figures show the IoU scores for different exposure time and idle time settings:</p>
+<p><img alt="iou" src="../assets/IOU_eval.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
