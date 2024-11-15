@@ -10,6 +10,12 @@
 
 ## Introduction
 
+Inspection is a vital part in the lifecycle of any manufactured part. Starting from validation during manufacturing, and subsequently whenever repair is required. In this study we focus on a few representative cases such as: AFP (Automated Fiber Placement), scratch detection on metal, resin deposits on manufacturing blocks and deformations on metal sheets. 
+
+Inspection is traditionally carried out in two steps. First, a visual inspection is performed to determine if there are any visible defects. Next, if anything is spotted in the first step, a detailed examination is performed. This could be a sub-surface scan or a surface inspection. This report focuses on using laser line scanners to perform the second step in an inspection process. Furthermore, this study also aims to detect defects during the process of AFP. 
+
+The results from the study will help extrapolate the right set of tuning parameters needed to maximize defect detection. To do so a methodology is created, which can be followed for more cases than covered in this study.
+
 ## Experiment Setup
 The aim of this deliverable is to evaluate the performance and effectiveness of an automated inspect system with Laser Line Scanner (LLS). To conduct this investigation, we designed  a system that integrates Robot Manipulator Doosan M1013 with a mounted Laser Line Scanner (LLS) Micro-Epsilon LLT3010-25 as the robot's end-effector.
 
